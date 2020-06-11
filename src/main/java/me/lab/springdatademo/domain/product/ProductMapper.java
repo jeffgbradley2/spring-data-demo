@@ -1,6 +1,6 @@
 package me.lab.springdatademo.domain.product;
 
-import me.lab.springdatademo.dto.ProductDto;
+import me.lab.springdatademo.api.dto.ProductDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

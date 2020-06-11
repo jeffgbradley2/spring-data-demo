@@ -1,9 +1,9 @@
-package me.lab.springdatademo.api;
+package me.lab.springdatademo.api.controller;
 
 import me.lab.springdatademo.domain.product.Product;
 import me.lab.springdatademo.domain.product.ProductMapper;
 import me.lab.springdatademo.domain.product.ProductService;
-import me.lab.springdatademo.dto.ProductDto;
+import me.lab.springdatademo.api.dto.ProductDto;
 import me.lab.springdatademo.domain.shared.SearchCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;

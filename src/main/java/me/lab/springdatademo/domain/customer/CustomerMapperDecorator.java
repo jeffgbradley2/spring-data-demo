@@ -1,6 +1,6 @@
 package me.lab.springdatademo.domain.customer;
 
-import me.lab.springdatademo.dto.CustomerDto;
+import me.lab.springdatademo.api.dto.CustomerDto;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public abstract class CustomerMapperDecorator implements CustomerMapper {

@@ -1,4 +1,4 @@
-package me.lab.springdatademo.dto;
+package me.lab.springdatademo.api.dto;
 
 import lombok.Data;
 

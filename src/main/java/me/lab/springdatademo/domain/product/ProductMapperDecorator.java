@@ -2,9 +2,8 @@ package me.lab.springdatademo.domain.product;
 
 import me.lab.springdatademo.domain.customer.Customer;
 import me.lab.springdatademo.domain.customer.CustomerService;
-import me.lab.springdatademo.dto.ProductDto;
+import me.lab.springdatademo.api.dto.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 
 public abstract class ProductMapperDecorator implements ProductMapper{
 

@@ -1,10 +1,11 @@
-package me.lab.springdatademo.api;
+package me.lab.springdatademo.api.controller;
 
 import me.lab.springdatademo.domain.customer.Customer;
 import me.lab.springdatademo.domain.customer.CustomerMapper;
 import me.lab.springdatademo.domain.customer.CustomerService;
-import me.lab.springdatademo.dto.CustomerDto;
+import me.lab.springdatademo.api.dto.CustomerDto;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,16 +25,22 @@ public class CustomerController {
         this.customerMapper = customerMapper;
     }
 
+    @GetMapping
+    public List<CustomerDto> getAll(){
+        List<Customer> customers = customerService.findAll();
+        return customerMapper.toDto(customers);
+    }
+
+    @GetMapping("/{id}")
+    public CustomerDto get(@PathVariable("id") Long id){
+        Customer customer = customerService.findById(id);
+        return customerMapper.toDto(customer);
+    }
+
     @PostMapping
     public CustomerDto post(@RequestBody CustomerDto customerDto){
         Customer customer = customerMapper.fromDto(customerDto);
         customer = customerService.save(customer);
         return customerMapper.toDto(customer);
-    }
-
-    @GetMapping
-    public List<CustomerDto> getAll(){
-        List<Customer> customers = customerService.findAll();
-        return customerMapper.toDto(customers);
     }
 }

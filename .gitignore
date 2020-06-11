@@ -1,0 +1,51 @@
+### Maven ###
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+### .Net ###
+.vs
+!packages/repository.config
+packages/*
+**/[Oo]bj/*
+**/[Bb]in/*
+!**/[Bb]in/*.refresh
+*.suo
+**/licenses.licx
+**/*.csproj.user
+
+### Macintosh ###
+.DS_Store
+
+### Vim ###
+*.swp
+
+### Ansible ###
+*.retry

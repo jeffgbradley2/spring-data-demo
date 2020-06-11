@@ -1,13 +1,13 @@
 package me.lab.springdatademo.domain.product;
 
 import me.lab.springdatademo.domain.shared.SearchCriteria;
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class ProductService {
 
     private final ProductRepository productRepository;
@@ -31,14 +31,10 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-    @Transactional
-    @Modifying
     public Product save(Product product){
         return productRepository.save(product);
     }
 
-    @Transactional
-    @Modifying
     public void delete(Long id){
         productRepository.deleteById(id);
     }

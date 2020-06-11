@@ -1,12 +1,12 @@
 package me.lab.springdatademo.domain.customer;
 
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class CustomerService {
 
     private final CustomerRepository customerRepository;
@@ -25,13 +25,10 @@ public class CustomerService {
         return customerRepository.findAll();
     }
 
-    @Transactional
     public Customer getProxy(Long id){
         return customerRepository.getOne(id);
     }
 
-    @Transactional
-    @Modifying
     public Customer save(Customer customer){
         return customerRepository.save(customer);
     }

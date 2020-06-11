@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
 public class CustomerService {
 
     private final CustomerRepository customerRepository;
@@ -15,12 +14,10 @@ public class CustomerService {
         this.customerRepository = customerRepository;
     }
 
-    @Transactional(readOnly = true)
     public Customer findById(Long id){
         return customerRepository.findById(id).orElseThrow();
     }
 
-    @Transactional(readOnly = true)
     public List<Customer> findAll(){
         return customerRepository.findAll();
     }

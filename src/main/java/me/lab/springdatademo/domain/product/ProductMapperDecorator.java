@@ -23,6 +23,9 @@ public abstract class ProductMapperDecorator implements ProductMapper{
             product.setCustomer(customer);
         }
 
+        product.getComponents().forEach(component ->
+                component.setProduct(product));
+
         return product;
     }
 }

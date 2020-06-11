@@ -10,8 +10,12 @@ public abstract class CustomerMapperDecorator implements CustomerMapper {
 
     @Override
     public Customer fromDto(CustomerDto customerDto) {
+
         Customer customer = delegate.fromDto(customerDto);
-        customer.getProducts().forEach(product -> product.setCustomer(customer));
+
+        customer.getProducts().forEach(product ->
+                product.setCustomer(customer));
+
         return customer;
     }
 }

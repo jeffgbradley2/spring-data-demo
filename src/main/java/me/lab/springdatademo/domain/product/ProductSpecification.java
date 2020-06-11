@@ -18,18 +18,18 @@ public class ProductSpecification implements Specification<Product> {
 
     @Override
     public Predicate toPredicate(Root<Product> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
-        if(criteria.getOperation().equalsIgnoreCase("EQUALS")) {
+        if(criteria.getOperation().equalsIgnoreCase("EQUALS"))
             return criteriaBuilder.equal(root.get(criteria.getKey()), criteria.getValue());
-        }
-        if(criteria.getOperation().equalsIgnoreCase("GREATER_THAN")) {
+
+        if(criteria.getOperation().equalsIgnoreCase("GREATER_THAN"))
             return criteriaBuilder.greaterThan(root.get(criteria.getKey()), criteria.getValue());
-        }
-        if(criteria.getOperation().equalsIgnoreCase("LESS_THAN")) {
+
+        if(criteria.getOperation().equalsIgnoreCase("LESS_THAN"))
             return criteriaBuilder.lessThan(root.get(criteria.getKey()), criteria.getValue());
-        }
-        if(criteria.getOperation().equalsIgnoreCase("LIKE")) {
+
+        if(criteria.getOperation().equalsIgnoreCase("LIKE"))
             return criteriaBuilder.like(root.get(criteria.getKey()), criteria.getValue());
-        }
+
         return null;
     }
 }

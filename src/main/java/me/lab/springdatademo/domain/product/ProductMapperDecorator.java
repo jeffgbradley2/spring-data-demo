@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public abstract class ProductMapperDecorator implements ProductMapper{
 
     @Autowired
-    @Qualifier("delegate")
     private ProductMapper delegate;
 
     @Autowired

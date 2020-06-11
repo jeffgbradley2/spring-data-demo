@@ -1,10 +1,10 @@
-package me.lab.springdatademo.dto;
+package me.lab.springdatademo.domain.shared;
 
 import lombok.Data;
 
 @Data
 public class SearchCriteria {
     private String key;
-    private String operation;
+    private OperationType operation;
     private String value;
 }

@@ -1,6 +1,6 @@
 package me.lab.springdatademo.domain.product;
 
-import me.lab.springdatademo.dto.SearchCriteria;
+import me.lab.springdatademo.domain.shared.SearchCriteria;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
